@@ -21,12 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zeu%e1f$)sq(onuhh@5bet3)oquzoc+8e$@-qj-&0h80b)z$c7'
+with open("../../.pssd_elegoua_prod_key", 'r') as f_key:
+    SECRET_KEY = f_key.read()
+# SECRET_KEY = 'django-insecure-zeu%e1f$)sq(onuhh@5bet3)oquzoc+8e$@-qj-&0h80b)z$c7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'http://ec2-3-138-252-120.us-east-2.compute.amazonaws.com/',
+]
 
 
 # Application definition
@@ -116,6 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = '../../static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     'webapp/static/',
