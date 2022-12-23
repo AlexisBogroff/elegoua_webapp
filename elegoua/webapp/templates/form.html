@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="form-container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+    <footer>
+        <p>Copyright 2023</p>
+    </footer>
+
+</html>
+{% endblock content %}
