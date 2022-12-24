@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'elegoua.wsgi.application'
+WSGI_APPLICATION = 'elegoua.wsgi.webapp'
 
 
 # Database
