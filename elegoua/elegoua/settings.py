@@ -20,16 +20,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-with open("../../.pssd_elegoua_prod_key", 'r') as f_key:
-    SECRET_KEY = f_key.read()
-# SECRET_KEY = 'django-insecure-zeu%e1f$)sq(onuhh@5bet3)oquzoc+8e$@-qj-&0h80b)z$c7'
+try:
+    # Generate SECRET_KEY with:
+    # > echo "export SECRET_KEY='$(openssl rand -hex 40)'" > .DJANGO_SECRET_KEY
+    # > source .DJANGO_SECRET_KEU
+    SECRET_KEY = os.environ["SECRET_KEY"]
+except KeyError as e:
+    raise RuntimeError("Could not find a SECRET_KEY in environment") from e
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = [
     'http://ec2-3-138-252-120.us-east-2.compute.amazonaws.com/',
+    '.elegoua.com',
 ]
 
 
@@ -42,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webapp',
 ]
 
 MIDDLEWARE = [
