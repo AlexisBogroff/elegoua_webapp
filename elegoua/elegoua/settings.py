@@ -33,7 +33,6 @@ except KeyError as e:
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'http://ec2-3-138-252-120.us-east-2.compute.amazonaws.com/',
     '.elegoua.com',
 ]
 
@@ -126,10 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = '../../static/'
+STATIC_ROOT = '/var/www/elegoua.com/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    'webapp/static/',
+    BASE_DIR / 'static',
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
