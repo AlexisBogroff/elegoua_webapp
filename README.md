@@ -15,3 +15,40 @@ Form page
 
 ## Current backend capabilities
 - Store user data into a csv file
+
+------------
+
+## Project Setup
+
+### Create separate development environment
+```
+conda create -n django_test python=3.9
+conda activate django_test
+```
+
+### Install django
+```
+conda install django
+```
+
+### Install package elegoua_engine
+cf. https://github.com/AlexisBogroff/CheatSheets/blob/master/PythonPackaging.md
+Select a location to store the package elegoua_engine
+```
+git clone https://github.com/AlexisBogroff/elegoua_engine.git
+cd elegoua_engine
+python setup.py develop
+```
+
+### Clone and launch webapp
+Select an other location to store elegoua_webapp
+```
+git clone https://github.com/AlexisBogroff/elegoua_webapp.git
+cd elegoua_webapp
+cd elegoua
+git checkout dev
+python manage.py runserver
+```
+
+### Go to website
+http://127.0.0.1:8000/webapp/home/
