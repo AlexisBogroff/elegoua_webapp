@@ -4,12 +4,6 @@ label {
 }
 
 
-form {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 
 input {
   font-family: 'Roboto', sans-serif;
