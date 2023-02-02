@@ -3,16 +3,6 @@ label {
   margin-bottom: .5rem;
 }
 
-.form-container {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 40px;
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 20px;
-}
-
 
 form {
   font-family: 'Roboto', sans-serif;
