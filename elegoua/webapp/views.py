@@ -20,22 +20,7 @@ def formpage(request):
         
         form = ContactForm(request.POST)
         if form.is_valid():
-            
-            # Get data from each form field
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            python_level = form.cleaned_data['python_level']
-            interest = form.cleaned_data['interest']
-
-            # Get student project
-            student_answer = {
-                'level': {'auto_eval_level': int(python_level)},
-                'interests': {
-                    'main_interest': interest,
-                    'other_interests': [],
-                },
-            }
-            project = get_project.Project(student_answer)
+            project = get_project.Project(form.cleaned_data)
             student_db, student_questions = project.define_project()
             
             # Debug print
