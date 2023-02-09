@@ -3,21 +3,20 @@
 
 <html>
 
-<head>
-  <title>Elegoua</title>
-</head>
+  <head>
+    <title>Elegoua</title>
+  </head>
 
-<body>
-  <header>
-    <h1>Elegoua</h1>
-    <nav>
-      <a href="{% url 'home' %}">Home</a>
-      <a href="{% url 'form' %}">Form</a>
-      <a href="{% url 'contact' %}">Contact</a>
-    </nav>
-  </header>
+  <body>
+    {% include 'navbar.html' %}
 
-  {% block content %}
-  {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-</body>
+  </body>
+
+  <footer>
+    <p>Copyright 2023</p>
+  </footer>
+
+  </html>
