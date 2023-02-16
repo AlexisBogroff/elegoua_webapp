@@ -7,6 +7,9 @@ from elegoua_engine import get_project
 def homepage(request):
     return render(request, 'home.html')
 
+def teampage(request):
+    return render(request, 'team.html')
+
 def contactpage(request):
     return render(request, 'contact.html')
 
