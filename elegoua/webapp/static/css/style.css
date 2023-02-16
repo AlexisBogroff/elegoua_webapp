@@ -76,12 +76,18 @@ header h1 {
   margin: 0;
 }
 nav {
+  align-items: center;
+  align-self: stretch;
   display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 nav a {
   text-decoration: none;
   color: black;
-  padding: 20px;
+  padding: 5px 6px;
 }
 nav a:hover {
   color: gray;
