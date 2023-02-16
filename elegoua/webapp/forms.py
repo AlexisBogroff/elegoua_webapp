@@ -1,8 +1,33 @@
 from django import forms
+from django.forms.fields import ChoiceField
+from django.forms.widgets import RadioSelect ,CheckboxSelectMultiple
 
-class ContactForm(forms.Form):
-    first_name = forms.CharField(max_length=100)
-    last_name = forms.CharField(max_length=100)
-    python_level = forms.CharField(max_length=300)
-    interest = forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
-
+class ContactForm(forms.Form):    
+    prenom = forms.CharField(max_length=100)
+    nom = forms.CharField(max_length=100)
+    groupe_TD= forms.CharField(max_length=100)
+    email = forms.EmailField ( max_length =200)
+    quelles_sont_vos_passions = forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
+    dans_quel_domaine_voulez_vous_travailler=forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
+    python_level_choices = (('1','débutant'),('2','intermediaire'),('3','avance'))
+    python_level = ChoiceField(widget=RadioSelect, choices=python_level_choices)
+    librairies_choices =(('1','numpy'),('2','pandas'),('3','matplotlib'),('4','scikit learn'))
+    quelles_librairies_avez_vous_deja_utilisees= ChoiceField(widget=CheckboxSelectMultiple, choices=librairies_choices)
+    structures_de_donnees_choices =(('1','arrays'),('2','listes'),('3','tuples'),('4','dataframes'),('5','series'))
+    quelles_structures_de_donnees_connaissez_vous= ChoiceField(widget=CheckboxSelectMultiple, choices=structures_de_donnees_choices)
+    caractere_en_python_choices =(('1','char'),('2','chr'),('3','character'),('4','il n y en a pas'))
+    quel_est_le_type_de_donnees_pour_un_caractere_en_python=ChoiceField(widget=RadioSelect, choices=caractere_en_python_choices)
+    quelle_est_la_syntaxe_d_une_boucle_for_pour_parcourir_les_elements_d_une_liste_L=forms.CharField(max_length=600)
+    quels_sont_les_arguments_de_la_fonction_range=forms.CharField(widget=forms.Textarea(attrs={'rows':3, 'cols':45}))
+    outil_rapide_choices=(('1','numpy'),('2','boucle'))
+    quel_est_l_outil_le_plus_rapide_pour_faire_des_calculs_sur_une_matrice=ChoiceField(widget=RadioSelect, choices=outil_rapide_choices)
+    quelles_sont_vos_activites_extrascolaires=forms.CharField(widget=forms.Textarea(attrs={'rows':3, 'cols':45}))
+    quel_metier_envisagez_vous=forms.CharField(widget=forms.Textarea(attrs={'rows':3, 'cols':45}))
+    preferez_vous_des_instructions_detailles_ou_des_indications_larges_pour_votre_projet=forms.CharField(max_length=200)
+    valeur_dictionnaire_choices=(('1','index'),('2','outil'))
+    qu_est_ce_qu_on_utilise_pour_avoir_acces_a_une_valeur_dans_un_dictionnaire=ChoiceField(widget=RadioSelect, choices=valeur_dictionnaire_choices)
+    quels_mots_cles_permettent_de_verifier_une_condition=forms.CharField(max_length=200)
+    quelle_fonction_permet_de_determiner_la_taille_d_un_dataframe=forms.CharField(max_length=200)
+    quel_argument_permet_d_acceder_aux_attributs_d_un_objet_dans_une_methode_de_classe=forms.CharField(max_length=200)
+    quelle_instruction_permet_d_avoir_le_nombre_total_de_valeurs_NA_pour_chaque_variable_d_un_dataframe_df=forms.CharField(max_length=200)
+    quelle_methode_permet_d_identifier_les_meilleurs_parametres_d_un_modele_ML=forms.CharField(max_length=200)
