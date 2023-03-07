@@ -1,1 +1,30 @@
-{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/styleTeam.css' %}">
+
+<html>
+    <div class="EnteteGeneraleTEAM">
+        <div class="EnteteTEAM">
+            <p>
+                <span class="EnteteTitre">TEAM</span>
+                <span class="EnteteSousTitre"><br />Discover who manage and make the Elegoua project evolve</span>
+            </p>
+        </div>
+    </div>
+    <body> 
+        <div class="teamDescription">
+            <div class="alexisProjectManager">
+                <img class="alexisBogroff" src="../assets/AlexisBOGROFF.png" alt="AlexisBOGROFF 1" />
+                <p class="projectManager sourcesanspro-normal-white-12px">
+                    <span class="span sourcesanspro-normal-copper-rust-12px">Alexis BOGROFF<br />- Project Manager -<br /></span>
+                    <span class="span4">Professor at ESILV and the Sorbonne | Open Classroom mentor | Data Science<br /></span>
+                    <a href="https://www.linkedin.com/in/alexisbogroff/" target="_blank">
+                        <span class="span1 sourcesanspro-normal-black-10px">https://www.linkedin.com/in/alexisbogroff/</span>
+                    </a>
+                </p>
+            </div>
+        <p class="pmExplication sourcesanspro-normal-white-12px"></p>
+        </div>
+        <footer> <p>Copyright 2023</p> </footer>
+    </body>
+</html>
