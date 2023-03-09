@@ -1,30 +1,44 @@
+{% extends 'base.html' %}
+
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/styleTeam.css' %}">
 
+{% block content %}
 <html>
-    <div class="EnteteGeneraleTEAM">
+    <!-- <head class="EnteteGeneraleTEAM">
         <div class="EnteteTEAM">
-            <p>
-                <span class="EnteteTitre">TEAM</span>
-                <span class="EnteteSousTitre"><br />Discover who manage and make the Elegoua project evolve</span>
-            </p>
+            <titre>
+                <h1 class="EnteteTitre">TEAM</h1>
+                <h2 class="EnteteSousTitre"><br />Discover who manage and make the Elegoua project evolve</h2>
+            </titre>
+        </div>
+    </head> -->
+    <div class="container">
+        <div class="content">
+            <div>
+                <div class="alexisProjectManager">
+                    <img class="alexisBogroff" src="https://media.licdn.com/dms/image/D4E03AQHBeWQ1lZ49Mg/profile-displayphoto-shrink_800_800/0/1669066123086?e=1683763200&v=beta&t=1qEWhbSyhcGkfhpW06uQlzNnBsmRBSCbzdUWGNbr9NI" alt="Photo Alexis BOGROFF">
+                    <p class="projectManager sourcesanspro-normal-white-12px">
+                        <span class="span sourcesanspro-normal-copper-rust-12px">Alexis BOGROFF<br />- Project Manager -<br /></span>
+                        <span class="span4">Professor at ESILV and the Sorbonne | Open Classroom mentor | Data Science<br /></span>
+                        <a href="https://www.linkedin.com/in/alexisbogroff/" target="_blank">
+                            <span class="span1 sourcesanspro-normal-black-10px">https://www.linkedin.com/in/alexisbogroff/</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="pmExplication sourcesanspro-normal-white-12px"><font color="#9D4B4C">Elegoua</font> is an idea of Alexis BOGROFF, professor and mentor in data science. 
+                                                                        The project was <font color="#9D4B4C">proposed as a business project</font> at ESILV, the engineering school 
+                                                                        of the <em>pôle Léonard de Vinci</em> in <em>Paris-La Défense</em>. It is therefore with the help of
+                                                                        4th and 5th year students that the project is built.</p>
+            </div>
         </div>
     </div>
-    <body> 
-        <div class="teamDescription">
-            <div class="alexisProjectManager">
-                <img class="alexisBogroff" src="../assets/AlexisBOGROFF.png" alt="AlexisBOGROFF 1" />
-                <p class="projectManager sourcesanspro-normal-white-12px">
-                    <span class="span sourcesanspro-normal-copper-rust-12px">Alexis BOGROFF<br />- Project Manager -<br /></span>
-                    <span class="span4">Professor at ESILV and the Sorbonne | Open Classroom mentor | Data Science<br /></span>
-                    <a href="https://www.linkedin.com/in/alexisbogroff/" target="_blank">
-                        <span class="span1 sourcesanspro-normal-black-10px">https://www.linkedin.com/in/alexisbogroff/</span>
-                    </a>
-                </p>
-            </div>
-        <p class="pmExplication sourcesanspro-normal-white-12px"></p>
-        </div>
-        <footer> <p>Copyright 2023</p> </footer>
     </body>
+    <footer> <p>Copyright 2023</p> </footer>
 </html>
+
+{% endblock content %}
