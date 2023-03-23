@@ -2,6 +2,9 @@
 
 {% block content %}
         <div class="form-container">
+            <div>
+            <p>Please answer to the different questions. Your answers will be used to assign you a dataset and questions  suitable with your level in python and your interests.</p>    
+            </div>
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
