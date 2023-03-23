@@ -25,8 +25,14 @@
       
     </nav>
   </header>
+    {% include 'navbar.html' %}
+    {% block content %}
+    {% endblock %}
 
-  {% block content %}
-  {% endblock %}
+  </body>
 
-</body>
+  <footer>
+    <p>Copyright 2023</p>
+  </footer>
+
+  </html>
