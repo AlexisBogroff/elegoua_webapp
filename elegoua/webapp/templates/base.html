@@ -1,19 +1,28 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
 
 <html>
 
 <head>
-  <title>Elegoua</title>
+  
+  <title >Elegoua</title>
 </head>
 
 <body>
   <header>
-    <h1>Elegoua</h1>
-    <nav>
+    <h1 >Elegoua</h1>
+    
+    <h1>EDTECH PROGRAM AIMED AT MAKING LEARNING MORE EFFECTIVE.</h1>
+    
+    <nav> 
       <a href="{% url 'home' %}">Home</a>
       <a href="{% url 'form' %}">Form</a>
       <a href="{% url 'contact' %}">Contact</a>
+      <a href="{% url 'ProjectOrigins' %}">ProjectOrigins</a>
+      <a href="{% url 'Demo' %}">Demo</a>
+      
     </nav>
   </header>
 
