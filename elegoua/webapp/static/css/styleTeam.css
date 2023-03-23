@@ -1,0 +1,99 @@
+/*###### COMON STYLE ######*/
+
+:root {
+    --black: #000000;
+    --dark-red: #572219;
+    --red: #9D4B4C;
+    --light-red: #C9A2A3;
+    --champagne: #F4EDE9;
+    --white: #FFFFFF;
+}
+
+/*## HEAD BLOC ##*/
+.head-container {
+    background-image: url("../assets/HomeEmpty.png");
+    background-size: cover;
+    padding: 20px;
+}
+
+/*## NAVBAR ##*/
+nav {
+    margin: 15px 15px 30px 15px;
+}
+.navbar a {
+    color:var(--black);
+    text-decoration: none;
+}
+
+/*## BLOC CONTENT ##*/
+.photo-bloc {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo-id { /*photo in columns*/
+    width: 100%;
+}
+
+.photo-img { /*photo resized*/
+    height: auto;
+    max-width: 18%;
+}
+
+.icon {
+    color: var(--dark-red);
+}
+
+/*## TEXT CONTENT ##*/
+.center-txt {
+    text-align: center;
+    margin: 0px;
+}
+
+.red-color {
+    color: var(--red);
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.add-margin {
+    margin-bottom: 15px;
+}
+
+/*## FOOTER ##*/
+footer {
+    padding: 5px;
+    margin-bottom: 0;
+
+    position: absolute;
+    width: 100%;
+
+    background-color: var(--red);
+
+    color: white;
+    text-align: center;
+}
+
+/*###### TEAM STYLE ######*/
+
+.no-p-margin {
+    margin: 0px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+/*###### FORM STYLE ######*/
+
+.form-container {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: var(--champagne);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+  }

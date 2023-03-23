@@ -3,14 +3,14 @@ from django.forms.fields import ChoiceField
 from django.forms.widgets import RadioSelect ,CheckboxSelectMultiple
 
 class ContactForm(forms.Form):    
-    prenom = forms.CharField(max_length=100)
-    nom = forms.CharField(max_length=100)
-    groupe_TD= forms.CharField(max_length=100)
-    email = forms.EmailField ( max_length =200)
-    quelles_sont_vos_passions = forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
-    dans_quel_domaine_voulez_vous_travailler=forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
-    python_level_choices = (('1','débutant'),('2','intermediaire'),('3','avance'))
+    first_name = forms.CharField(max_length=100)
+    last_name = forms.CharField(max_length=100)
+    group = forms.CharField(max_length=100)
+    email = forms.EmailField (max_length =200)
+    python_level_choices = (('1','Beginner'),('2','intermediate'),('3','advanced'))
     python_level = ChoiceField(widget=RadioSelect, choices=python_level_choices)
+    interest = forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
+    dans_quel_domaine_voulez_vous_travailler=forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':45}))
     librairies_choices =(('1','numpy'),('2','pandas'),('3','matplotlib'),('4','scikit learn'))
     quelles_librairies_avez_vous_deja_utilisees= ChoiceField(widget=CheckboxSelectMultiple, choices=librairies_choices)
     structures_de_donnees_choices =(('1','arrays'),('2','listes'),('3','tuples'),('4','dataframes'),('5','series'))

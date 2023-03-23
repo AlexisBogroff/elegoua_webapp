@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="head-container red-color center-txt">
+    <div class="container">
+        <h1>Demo</h1>
+        <h4>See how Elegoua is built and how it works !</h4>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<!-- main container -->
+<div class="container" style="min-height:57vh">
+    <!-- text and photo -->
+    <div>
+        <!-- good luck -->
+        <div>
+            <p class="fs-4 center-txt red-color">Something went wrong</p>
+            <p class="fs-6 center-txt">This page isn't built yet... Come back later !</p>
+        </div>
+        <!-- photo -->
+        <div class="text-center">
+            <img class="photo-img" src="{% static 'assets/undraw_Error.png' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>ELEGOUA - Copyright 2023</p>
+</footer>
+  
+{% endblock %}

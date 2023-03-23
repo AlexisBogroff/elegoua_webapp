@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="head-container red-color center-txt">
+    <div class="container">
+        <h1>Team</h1>
+        <h4>Discover who manage and make the Elegoua project evolve</h4>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<!-- main container -->
+<div class="container">
+    <!-- bloc photo + project manager -->
+    <div class="row photo-bloc">
+        <!-- bloc photo -->
+        <div class="col-2">
+            <img class="photo-id" src="{% static 'assets/AlexisBOGROFF.png' %}" alt="">
+        </div>
+        <!-- project manager -->
+        <div class="col-10">
+            <p class="fs-4 red-color center-txt">Alexis BOGROFF<br> - Project Manager - </p>
+            <p class="fs-6 center-txt"><em>Professor at ESILV and the Sorbonne | OpenClassroom mentor | Data Science</em></p>
+            <p class="center-txt"><a href="https://www.linkedin.com/in/alexisbogroff/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a></p>
+        </div>
+    </div>
+    <!-- project description (text) -->
+    <div>
+        <p class="fs-6 justify-text"><font color="#9D4B4C">Elegoua</font> is an idea of Alexis BOGROFF, professor and mentor in data science. 
+            The project was <font color="#9D4B4C">proposed as a business project</font> at ESILV, the engineering school 
+            of the <em>pôle Léonard de Vinci</em> in <em>Paris-La Défense</em>. It is therefore with the help of
+            4th and 5th year students that the project is built.</p>
+    </div>
+    <!--- team 2022 2023 (liste) -->
+    <div>
+        <p class="fs-5 red-color"><strong>ESILV</strong> Team, 2022-2023 --------------------<br></p>
+        <ul>
+            <li>
+                <p class="no-p-margin">
+                    <a href="https://www.linkedin.com/in/tom-elmaleh/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
+                    <font color="#9D4B4C"><strong> Tom ELMALEH</strong> - Data&IA :</font> Natural language processing, knowledge graph, recommender system, frontend (HTML & CSS) ...
+                </p>
+            </li>
+            <li>
+                <p class="no-p-margin">
+                    <a href="https://www.linkedin.com/in/philippine-huchet/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
+                    <font color="#9D4B4C"><strong>Philippine HUCHET</strong> - Santé Biotech :</font> Etude de marché, étude concurrentielle, étude comportement, frontend (HTML & CSS), ...
+                </p>
+            </li>
+            <li>
+                <p class="no-p-margin">
+                    <a href="https://www.linkedin.com/in/melanie-gambiez/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
+                    <font color="#9D4B4C"><strong>Mélanie GAMBIEZ</strong> - Data&IA :</font> Identité visuelle, étude colorimétrie, maquette du site vitrine, frontend (HTML & CSS), ...
+                </p>
+            </li>
+            <li>
+                <p class="no-p-margin">
+                    <a href="https://www.linkedin.com/in/arthur-nguyen-binh-2669b020a/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
+                    <font color="#9D4B4C"><strong>Arthur NGUYEN BINH</strong> - Data&IA :</font> ...
+                </p>
+            </li>
+            <li>
+                <p class="no-p-margin">
+                    <a href="https://www.linkedin.com/in/hugo-dardill-b1716b1a0/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
+                    <font color="#9D4B4C"><strong>Hugo DARDILL</strong> - Data&IA :</font> ...
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>ELEGOUA - Copyright 2023</p>
+  </footer>
+
+{% endblock %}
