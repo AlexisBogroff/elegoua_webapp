@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from elegoua_engine import get_project
 from .forms import ContactForm
 from .views_functions import *
-from elegoua_engine import get_project
+
 
 def homepage(request):
     return render(request, 'home.html')
@@ -12,13 +13,17 @@ def contactpage(request):
 
 def thankspage(request):
     return render(request, 'thanks.html')
+def ProjectOriginspage(request):
+    return render(request,'ProjectOrigins.html' )
+def Demopage(request):
+    return render(request,'Demo.html')
 
 def formpage(request):
     if request.method == 'POST':
         # Extract and process filled up data        
         form = ContactForm(request.POST)
-        if form.is_valid():  
-
+        if form.is_valid():
+            project=get_project.Project(form.cleaned_data)
             # Get data from each form field         
             prenom = form.cleaned_data['prenom']
             nom = form.cleaned_data['nom']
@@ -57,8 +62,8 @@ def formpage(request):
             print(f'student_level: {student_db}')
             print(f'student_questions: {student_questions}')
             # Export data to csv
-            form_data = [                                                                                
-            ]
+            form_data =   []                                                                              
+            
             export_form(form_data)
             return render(request, 'thanks.html')
     else:
