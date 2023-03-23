@@ -1,26 +1,91 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <div class="container">
-      <div class="content">
-        <div>
-          <h2>Welcome!</h2>
-          <p>This is the right place for your personalized learning.</p>
-        </div>
-        <div>
-          <h2>How it works?</h2>
-          <p>Based on both your level of programming and your interests, the app will provide you with an appropriate dataset and set of programming questions.</p>
-        </div>
-        <div>
-          <h2>How to proceed?</h2>
-          <p>Fill in your informations in the form area and you will get your project.</p>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <p>Copyright 2023</p>
-    </footer>
-  </body>
-</html>
+{% load static %}
 
-{% endblock content %}
+{% block content %}
+
+<div class="head-container red-color center-txt">
+    <div class="container">
+        <h1>Elegoua</h1>
+        <h4>EdTech program aimed at making learning more effective.</h4>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<!-- main container -->
+<div class="container">
+  <!-- bloc photo + welcome -->
+  <div class="row photo-bloc">
+    <!-- photo -->
+    <div class="col-2">
+      <img class="photo-id" src="{% static 'assets/undraw_Welcome.png' %}" alt="">
+    </div>
+    <!-- welcome -->
+    <div class="col-10">
+      <p class="fs-4 red-color">Welcome !</p>
+      <p>This is the right place for your personalized learning !</p>
+    </div>
+  </div>
+  <!-- bloc photo + how it works -->
+  <div class="row photo-bloc">
+    <!-- photo -->
+    <div class="col-2">
+      <img class="photo-id" src="{% static 'assets/undraw_HowItWorks.png' %}" alt="">
+    </div>
+    <!-- how it works -->
+    <div class="col-10">
+      <p class="fs-4 red-color">How it works ?</p>
+      <p>Based on both your level of programming and your interests, the app will provide you with an appropriate dataset and set of programming questions.</p>
+    </div>
+  </div>
+  <!-- bloc photo + how to proceed -->
+  <div class="row photo-bloc">
+    <!-- photo -->
+    <div class="col-2">
+      <img class="photo-id" src="{% static 'assets/undraw_HowToProceed.png' %}" alt="">
+    </div>
+    <!-- how to proceed -->
+    <div class="col-10">
+      <p class="fs-4 red-color">How to proceed ?</p>
+      <p>Fill in your information and answer the question in the form area. You will get your personalized project.</p>
+    </div>
+  </div>
+  <!-- bloc photo + need help -->
+  <div class="row photo-bloc">
+    <!-- photo -->
+    <div class="col-2">
+      <img class="photo-id" src="{% static 'assets/undraw_NeedHelp.png' %}" alt="">
+    </div>
+    <!-- need help -->
+    <div class="col-10">
+      <p class="fs-4 red-color">Need Help ?</p>
+      <p>You are having problems with the application or with your dataset ? My details are in the contact section !</p>
+    </div>
+  </div>
+  <!-- bloc photo + good luck -->
+  <div>
+    <!-- good luck -->
+    <div>
+      <p class="fs-4 center-txt"><font color="#9D4B4C">Good luck</font> with your project,<font color="#9D4B4C"> try your best !</font></p>
+    </div>
+    <!-- photo -->
+    <div class="text-center">
+      <img class="photo-img" src="{% static 'assets/undraw_GoodLuck.png' %}" alt="">
+    </div>
+  </div>
+  <!-- bloc ending message -->
+  <div>
+    <!-- line and text -->
+    <div>
+      <p class="fs-4 red-color center-txt">------------------------------</p>
+      <p class="center-txt add-margin">You want to <font color="#9D4B4C">learn more about the project</font> ? Check the <font color="#9D4B4C">project origins</font> section as well as the <font color="#9D4B4C">team</font> and <font color="#9D4B4C">demo</font> section !</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>ELEGOUA - Copyright 2023</p>
+</footer>
+
+{% endblock %}

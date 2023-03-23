@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="head-container red-color center-txt">
+    <div class="container">
+        <h1>Project Origins</h1>
+        <h4>Learn more about the Elegoua project, its problematic and story</h4>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<!-- main container -->
+<div class="container">
+    <!-- problematic -->
+    <div>
+        <!-- 1rst paragraph -->
+        <div>
+            <p class="fs-4 red-color">-- Our problematic ---------------------------</p>
+            <p class="fs-6 justify-text">
+                In 2021, more than <font color="#9D4B4C">12 million</font>(1) students entered schools, colleges and high schools in France. 
+                It is also <font color="#9D4B4C">7.8%</font>(2) of early school leavers, ie of students who have dropped out of school and 
+                have no qualifications or diplomas.
+            </p>
+        </div>
+        <!-- photo mom and son -->
+        <div class="text-center">
+            <img class="photo-img" src="{% static 'assets/undraw_school.png' %}" alt="">
+        </div>
+        <!-- 2e paragraph -->
+        <div>
+            <p class="fs-6 justify-text">
+                One of the <font color="#9D4B4C">major factors</font> in this abandonment of school lies in the 
+                <font color="#9D4B4C">academic difficulty</font> which is all the more reinforced in middle school 
+                where more than <font color="#9D4B4C">40%</font>(3) of pupils experience repetition. 
+                The <font color="#9D4B4C">teaching methods</font> are called into question because they are considered 
+                to be <font color="#9D4B4C">not very rewarding and not very differentiated</font>. Yet each student has 
+                different educational needs.
+            </p>
+        </div>
+        <!-- photo blank board -->
+        <div class="text-center">
+            <img class="photo-img" src="{% static 'assets/undraw_BlankBoard.png' %}" alt="">
+        </div>
+        <!-- 3e paragraph -->
+        <div>
+            <p class="fs-6 justify-text">
+                How to <font color="#9D4B4C">overcome these difficulties</font> and best support students in 
+                their journey? How to <font color="#9D4B4C">fight against early exit</font> from the school system, 
+                depriving some of a diploma which is nevertheless essential for job search?
+            </p>
+        </div>
+    </div>
+    <!-- birth of elegoua -->
+    <div>
+        <!-- title and text -->
+        <div>
+            <p class="fs-4 red-color">-- Birth of the Elegoua Project ---------------</p>
+            <p class="fs-6 justify-text">
+                Elegoua was born from the <font color="#9D4B4C">desire to make learning simple and suitable for everyone</font>. 
+                While some learn better with examples, others prefer to go straight to the point and still others need diagrams 
+                to understand... <font color="#9D4B4C">Everyone's needs are different</font>, so why offer the same course for everyone ?
+            </p>
+        </div>
+        <!-- photo open book -->
+        <div class="text-center">
+            <img class="photo-img" src="{% static 'assets/undraw_Book.png' %}" alt="">
+        </div>
+    </div>
+    <!-- origin of the name -->
+    <div>
+        <!-- title and text -->
+        <div>
+            <p class="fs-4 red-color">-- Origin of the name Elegoua ---------------</p>
+            <p class="fs-6 justify-text">
+                In the <font color="#9D4B4C">Yoruba religion</font> ("the source of our tradition"), in the South 
+                West of Nigeria, Eleggua is the <font color="#9D4B4C">spirit of communication</font>, intermediary 
+                between divinities and men. He is the divine messenger and great negotiator between the negative 
+                forces and the positive forces of the body. In the same way, the <font color="#9D4B4C">Elegoua project acts as an intermediary between knowledge and yourself</font>.
+            </p>
+        </div>
+        <!-- photo Eleggua -->
+        <div class="text-center">
+            <p class="no-p-margin">
+                <a href="https://en.wikipedia.org/wiki/Elegua" target="_blank"><img class="photo-img" src="{% static 'assets/Eleggua.jpg' %}" alt="Eleggua on Wikipedia"></a>
+            </p>
+        </div>
+    </div>
+    <!-- sources -->
+    <div>
+        <!-- line and text -->
+        <div>
+            <p class="fs-4 red-color center-txt">------------------------------</p>
+            <p class="center-txt add-margin">According to (1)<em>education.gouv.fr</em>, (2)<em>insee.fr</em> and (3)<em>Centre de Ressources Prospectives du grand Lyon</em></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>ELEGOUA - Copyright 2023</p>
+</footer>
+  
+{% endblock %}

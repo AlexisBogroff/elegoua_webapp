@@ -7,6 +7,12 @@ from elegoua_engine import get_project
 def homepage(request):
     return render(request, 'home.html')
 
+def originpage(request):
+    return render(request, 'origins.html')
+
+def demopage(request):
+    return render(request, 'demo.html')
+
 def teampage(request):
     return render(request, 'team.html')
 
@@ -15,7 +21,6 @@ def contactpage(request):
 
 def thankspage(request):
     return render(request, 'thanks.html')
-
 
 def formpage(request):
     if request.method == 'POST':

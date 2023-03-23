@@ -1,17 +1,32 @@
 {% extends 'base.html' %}
 
-{% block content %}
-        <div class="form-container">
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </body>
-    <footer>
-        <p>Copyright 2023</p>
-    </footer>
+{% load static %}
 
-</html>
-{% endblock content %}
+{% block content %}
+
+<div class="head-container red-color center-txt">
+    <div class="container">
+        <h1>Form</h1>
+        <h4>Elegoua will provide you with an appropriate dataset</h4>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<!-- main container -->
+<div class="container add-margin" style="min-height:56vh">
+    <!-- form container -->
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>ELEGOUA - Copyright 2023</p>
+</footer>
+  
+{% endblock %}

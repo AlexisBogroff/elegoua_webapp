@@ -51,6 +51,7 @@ input[type="submit"]:hover {
   background-color: rgb(99, 11, 11);
 }
 
+/*
 footer {
   position: absolute;
   margin-bottom: 0;
@@ -59,19 +60,22 @@ footer {
   color: white;
   background-color: rgb(202, 56, 56);
   text-align: center;
-}
+}*/
 
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  min-height:500px;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  color: black;
+  background-color: #f4ede9;
 }
 header h1 {
   margin: 0;
@@ -84,11 +88,13 @@ nav {
   justify-content: center;
   position: relative;
   z-index: 1;
+  /* border: solid 1px yellow; DELETE */
 }
 nav a {
   text-decoration: none;
   color: black;
   padding: 5px 6px;
+  /* border: solid 1px green DELETE */
 }
 nav a:hover {
   color: gray;
@@ -97,12 +103,17 @@ nav a:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 10px;
+  min-height:70vh;
+  border: solid 1px green; /*DELETE*/
 }
 .content {
   display: flex;
   flex-wrap: wrap;
+  border: solid 1px blueviolet; /*DELETE*/
 }
 .content > div {
-  width: 50%;
-  padding: 20px;
+  width: 60%;
+  padding: 10px;
+  margin: 0 auto;
+  border: solid 1px blue; /*DELETE*/
 }
