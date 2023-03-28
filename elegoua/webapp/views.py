@@ -66,38 +66,22 @@ def formpage(request):
                     'other_interests': hobbies,
                 },
             }
-            
             print(student_answer)
             project = get_project.Project(student_answer)
-            level,subject = project.define_project()  
+            level,subject,dataset = project.define_project()  
             # Debug print
             print(f'student_level: {level}')
             print(f'student_subject: {subject}')
+            
             # Export data to csv
-            # student_db & student_question
-            form_data = [first_name,last_name,python_level,subject]
+            form_data = [first_name,last_name,python_level,subject,dataset]
             export_form(form_data)
             # student_db & student_question
             # dico = {'dataset_filename' : dataset_filename, 'question':question'}    
-            dico = {"subject":subject,"level" : level}
+            dico = {"subject":subject,"level" : level,"dataset":dataset}
             return render(request, 'thanks.html',dico)
     else:
         # Display empty form since the page has just been loaded
         form = ContactForm()
         
     return render(request, 'form.html', {'form': form})
-    
-
-#student_db, student_questions = project.define_project()  
-# Debug print
-# print(f'student_level: {student_db}')
-# print(f'student_questions: {student_questions}')
-# Export data to csv
-# form_data = [
-#     first_name,
-#     last_name,
-#     python_level,
-#     interest,
-#     student_db,
-#     student_questions
-# ]
